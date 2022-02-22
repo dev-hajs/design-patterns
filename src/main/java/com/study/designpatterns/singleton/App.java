@@ -12,13 +12,13 @@ public class App {
         System.out.println(settings1 == settings2);
 
         // reflection
-        Settings settings3 = null;
-        Constructor<?>[] declaredConstructors = Settings.class.getDeclaredConstructors();
-        for (Constructor<?> constructor : declaredConstructors) {
-            constructor.setAccessible(true);
-            settings1 = (Settings) constructor.newInstance("INSTANCE");
-        }
-        System.out.println(settings1 == settings3);
+//        Settings settings3 = null;
+//        Constructor<?>[] declaredConstructors = Settings.class.getDeclaredConstructors();
+//        for (Constructor<?> constructor : declaredConstructors) {
+//            constructor.setAccessible(true);
+//            settings1 = (Settings) constructor.newInstance("INSTANCE");
+//        }
+//        System.out.println(settings1 == settings3);
 
         // serializable
         Settings settings4 = null;
