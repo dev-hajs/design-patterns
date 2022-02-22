@@ -7,14 +7,17 @@ import java.lang.reflect.InvocationTargetException;
 public class App {
 
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, IOException, ClassNotFoundException {
-        Settings settings1 = Settings.getInstance();
-        Settings settings2 = Settings.getInstance();
+        Settings settings1 = Settings.INSTANCE;
+        Settings settings2 = Settings.INSTANCE;
         System.out.println(settings1 == settings2);
 
         // reflection
-        Constructor<Settings> constructor = Settings.class.getDeclaredConstructor();
-        constructor.setAccessible(true);
-        Settings settings3 = constructor.newInstance();
+        Settings settings3 = null;
+        Constructor<?>[] declaredConstructors = Settings.class.getDeclaredConstructors();
+        for (Constructor<?> constructor : declaredConstructors) {
+            constructor.setAccessible(true);
+            settings1 = (Settings) constructor.newInstance("INSTANCE");
+        }
         System.out.println(settings1 == settings3);
 
         // serializable
