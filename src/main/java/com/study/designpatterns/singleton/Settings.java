@@ -1,6 +1,8 @@
 package com.study.designpatterns.singleton;
 
-public class Settings {
+import java.io.Serializable;
+
+public class Settings implements Serializable {
 
     private static volatile Settings instance;
 
@@ -17,4 +19,8 @@ public class Settings {
 
         return instance;
     }
+
+//    protected Object readResolve() {
+//        return getInstance();
+//    }
 }
