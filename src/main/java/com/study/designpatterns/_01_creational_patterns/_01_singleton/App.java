@@ -1,4 +1,4 @@
-package com.study.designpatterns._01_creational_patterns.singleton;
+package com.study.designpatterns._01_creational_patterns._01_singleton;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
