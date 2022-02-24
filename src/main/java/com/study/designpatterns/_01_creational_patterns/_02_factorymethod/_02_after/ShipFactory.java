@@ -26,7 +26,7 @@ public interface ShipFactory {
         System.out.println(name + " 만들 준비 중");
     }
 
-    private void sendEmailTo(String email, Ship ship) {
-        System.out.println(ship.getName() + " 다 만들었습니다.");
-    }
+    // interface 에 private 메소드는 1.9 에 등장했다.
+    // 따라서 1.8 이하는 DefaultShipFactory 처럼 계층구조를 하나 더 만들어서 진행하면 된다.
+    void sendEmailTo(String email, Ship ship);
 }
