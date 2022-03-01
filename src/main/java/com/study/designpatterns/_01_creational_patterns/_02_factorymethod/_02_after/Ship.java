@@ -1,5 +1,14 @@
 package com.study.designpatterns._01_creational_patterns._02_factorymethod._02_after;
 
+import com.study.designpatterns._01_creational_patterns._03_abstract_factory._01_before.WhiteAnchor;
+import com.study.designpatterns._01_creational_patterns._03_abstract_factory._01_before.WhiteWheel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class Ship {
 
     private String name;
@@ -8,36 +17,7 @@ public class Ship {
 
     private String logo;
 
-    public String getName() {
-        return name;
-    }
+    private WhiteWheel wheel;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    @Override
-    public String toString() {
-        return "Ship{" +
-                "name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", logo='" + logo + '\'' +
-                '}';
-    }
+    private WhiteAnchor anchor;
 }
