@@ -1,7 +1,7 @@
 package com.study.designpatterns._01_creational_patterns._02_factorymethod._02_after;
 
-import com.study.designpatterns._01_creational_patterns._03_abstract_factory._01_before.WhiteAnchor;
-import com.study.designpatterns._01_creational_patterns._03_abstract_factory._01_before.WhiteWheel;
+import com.study.designpatterns._01_creational_patterns._03_abstract_factory._02_after.Anchor;
+import com.study.designpatterns._01_creational_patterns._03_abstract_factory._02_after.Wheel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -17,7 +17,7 @@ public class Ship {
 
     private String logo;
 
-    private WhiteWheel wheel;
+    private Wheel wheel;
 
-    private WhiteAnchor anchor;
+    private Anchor anchor;
 }
