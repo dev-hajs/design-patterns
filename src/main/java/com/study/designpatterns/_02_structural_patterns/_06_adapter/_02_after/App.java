@@ -7,8 +7,8 @@ public class App {
 
     public static void main(String[] args) {
         AccountService accountService = new AccountService();
-        UserDetailService userDetailService = new AccountUserDetailsService(accountService);
-        LoginHandler loginHandler = new LoginHandler(userDetailService);
+//        UserDetailService userDetailService = new AccountUserDetailsService(accountService);
+        LoginHandler loginHandler = new LoginHandler(accountService);
         String login = loginHandler.login("jisu", "jisu");
         System.out.println("login = " + login);
     }
