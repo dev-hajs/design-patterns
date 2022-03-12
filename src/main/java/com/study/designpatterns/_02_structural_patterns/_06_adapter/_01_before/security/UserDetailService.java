@@ -1,0 +1,6 @@
+package com.study.designpatterns._02_structural_patterns._06_adapter._01_before.security;
+
+public interface UserDetailService {
+
+    UserDetails loadUser(String username);
+}
