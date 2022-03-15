@@ -1,4 +1,4 @@
 package com.study.designpatterns._02_structural_patterns._07_bridge._01_before;
 
-public class PoolParty카이사 implements Champion {
+public class PoolParty카이사 {
 }
