@@ -1,0 +1,15 @@
+package com.study.designpatterns._02_structural_patterns._09_decorator._01_before;
+
+public class SpamFilteringCommentService extends CommentService {
+
+    @Override
+    public void addComment(String comment) {
+        if (!isSpam(comment)) {
+            super.addComment(comment);
+        }
+    }
+
+    private boolean isSpam(String comment) {
+        return comment.contains("http");
+    }
+}
