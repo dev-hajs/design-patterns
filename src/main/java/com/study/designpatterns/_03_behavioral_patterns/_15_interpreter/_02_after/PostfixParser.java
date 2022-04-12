@@ -2,6 +2,8 @@ package com.study.designpatterns._03_behavioral_patterns._15_interpreter._02_aft
 
 import java.util.Stack;
 
+import static com.study.designpatterns._03_behavioral_patterns._15_interpreter._02_after.PostfixExpression.*;
+
 public class PostfixParser {
 
     public static PostfixExpression parse(String expression) {
@@ -15,13 +17,13 @@ public class PostfixParser {
     private static PostfixExpression getExpression(char c, Stack<PostfixExpression> stack) {
         switch (c) {
             case '+':
-                return new PlusExpression(stack.pop(), stack.pop());
+                return plus(stack.pop(), stack.pop());
             case '-':
                 PostfixExpression right = stack.pop();
                 PostfixExpression left = stack.pop();
-                return new MinusExpression(left, right);
+                return minus(left, right);
             default:
-                return new VariableExpression(c);
+                return variable(c);
         }
     }
 }
