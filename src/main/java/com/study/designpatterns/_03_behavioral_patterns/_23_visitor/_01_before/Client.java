@@ -4,6 +4,7 @@ public class Client {
 
     public static void main(String[] args) {
         Shape rectangle = new Rectangle();
-        rectangle.printTo(new Phone());
+        Device device = new Phone();
+        rectangle.printTo(device);
     }
 }
